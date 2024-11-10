@@ -30,8 +30,16 @@ console.log(sum(range(1, 10))); // returns 55
 // reverseArrayInPlace, does what the built-in reverse method does: it modifies the array
 // given as an argument by reversing its elements. Neither may use the standard reverse
 // method.
-// Example output for reverseArray:
-// console.log(reverseArray(["A", "B", "C"])); // outputs ["C", "B", "A"];
+function reverseArray(array) { 
+    let newArray = []; 
+    for (let i = array.length - 1; i >= 0; i--) { 
+        newArray.push(array[i]); 
+    } 
+    return newArray;
+}
+
+// Example output for reverseArray: 
+console.log(reverseArray(["A", "B", "C"])); // outputs ["C", "B", "A"];
 // Example output for reverseArrayInPlace:
 // let arrayValue = [1, 2, 3, 4, 5];
 // reverseArrayInPlace(arrayValue);
